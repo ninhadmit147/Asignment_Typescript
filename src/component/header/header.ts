@@ -1,7 +1,10 @@
 const HeaderUser = {
   render: () => {
-    console.log("hahahahss");
-
+    const hiddenAuto = document.querySelector("#lognuot")
+    console.log(localStorage.getItem('user'));
+    if (localStorage.getItem('user')) {
+      hiddenAuto?.classList("")
+    }
     return `
         <div class="h-[64px] bg-[#D70018]">
       <!-- Header -->
@@ -36,16 +39,23 @@ const HeaderUser = {
             </svg>
             Giỏ hàng
           </a>
-          <a class="flex w-[100px] my-2 " href="/admin/products">
+          <a id="lognin" class="flex w-[100px] my-2 " href="/signin">
           <svg xmlns="http://www.w3.org/2000/svg"  class="h-10 w-10 my-1 mx-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-        </svg>
+          </svg>
+          </a>
+          <a id="lognout" class="hidden w-[100px] my-2 " href="/signin">
+          <svg xmlns="http://www.w3.org/2000/svg"  class="h-10 w-10 my-1 mx-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+          </svg>
           </a>
         </div>  
       </div>
      </div>
         `
   },
+  afterRender: () => {
 
+  }
 }
 export default HeaderUser

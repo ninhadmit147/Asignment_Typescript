@@ -1,10 +1,17 @@
 {
-  "user": [
+  "users": [
     {
+      "email": "ninhxz147@gmail.com",
+      "password": "$2a$10$ioBPJ83n9OSHLi2K5ks/huGYaaLufYiEyl0Rapoo5Cs4qfD8CnP5a",
+      "phone": "0363480678",
       "id": 1,
-      "email": "ninhadmit147@gmail.com",
-      "name": "Mai Khả Ninh",
-      "password": "admit147"
+      "role": 1
+    },
+    {
+      "email": "ninhple147@gmail.com",
+      "password": "$2a$10$NK10PzLc1WktiU05.I7yA.NANUlYv3GEH6rOgYrHAi5dGgG1W17DO",
+      "phone": "0363480678",
+      "id": 2
     }
   ],
   "products": [
@@ -121,6 +128,18 @@
       "category": "2",
       "isDelete": true,
       "id": 10
+    },
+    {
+      "image": "http://res.cloudinary.com/thisisninh/image/upload/v1659723830/295640489_760807318473308_3045313408014350095_n_xn94pa.jpg",
+      "name": "Mai Kha Ninh",
+      "price": "300000",
+      "sale": "20000",
+      "longDesc": "qeqweqwe",
+      "shortDesc": "qưqww",
+      "salientfeatures": "eqqwe",
+      "category": "2",
+      "isDelete": true,
+      "id": 11
     }
   ],
   "category": [

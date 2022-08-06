@@ -112,102 +112,106 @@ const AddProd = {
     const erLong = document.querySelector("#erLong")
     const preview = document.querySelector("#preview")
     const plus = document.querySelector("#plus")
+    if (localStorage.length() === "") {
+      alert("Chưa đăng nhập")
+    } else {
+      formAdd?.addEventListener('click', async function (e) {
+        e.preventDefault
+        const name = document.querySelector('#name')?.value
+        const price = document.querySelector('#price')?.value
+        const sale = document.querySelector('#sale')?.value
+        const longDesc = document.querySelector('#longDesc')?.value
+        const shortDesc = document.querySelector('#shortDesc')?.value
+        const salientfeatures = document.querySelector('#salientfeatures')?.value
+        const category = document.querySelector('#cate')?.value
 
-    formAdd?.addEventListener('click', async function (e) {
-      e.preventDefault
-      const name = document.querySelector('#name')?.value
-      const price = document.querySelector('#price')?.value
-      const sale = document.querySelector('#sale')?.value
-      const longDesc = document.querySelector('#longDesc')?.value
-      const shortDesc = document.querySelector('#shortDesc')?.value
-      const salientfeatures = document.querySelector('#salientfeatures')?.value
-      const category = document.querySelector('#cate')?.value
+        if (name == "") {
+          erName.innerHTML = "Chưa nhập tên cho sản phẩm"
+          console.log("ez");
+        } else {
+          erName.innerHTML = ""
 
-      if (name == "") {
-        erName.innerHTML = "Chưa nhập tên cho sản phẩm"
-        console.log("ez");
-      } else {
-        erName.innerHTML = ""
-
-      }
-      if (price == "") {
-        erPrice.innerHTML = "Chưa nhập giá cho sản phẩm"
-      }
-      else {
-        erPrice.innerHTML = ""
-
-      }
-      if (longDesc == "") {
-        erLong.innerHTML = "Chưa nhập mô tả dài"
-      }
-      else {
-        erLong.innerHTML = ""
-
-      }
-      if (shortDesc == "") {
-        erShort.innerHTML = "Chưa nhập mô tả ngắn cho sản phẩm"
-      } else {
-        erShort.innerHTML = ""
-
-      }
-      if (salientfeatures == "") {
-        erVip.innerHTML = "Chưa nhập đặc điểm cho sản phẩm"
-      }
-      else {
-        erVip.innerHTML = ""
-
-      }
-      if (salientfeatures == "") {
-        erVip.innerHTML = "Chưa nhập đặc điểm cho sản phẩm"
-      }
-      else {
-        erVip.innerHTML = ""
-
-      }
-      if (preview.src == "") {
-        vldImg.innerHTML = "Chưa chọn ảnh cho sản phẩm"
-      } else {
-        vldImg.innerHTML = ""
-
-      }
-      if (name != "" && price != "" && sale != "" && longDesc != "" && shortDesc != "" && salientfeatures != "") {
-        const product: Product = {
-          image: preview?.src,
-          name: name,
-          price: price,
-          sale: sale,
-          longDesc: longDesc,
-          shortDesc: shortDesc,
-          salientfeatures: salientfeatures,
-          category: category,
-          isDelete: true
         }
-        const data = await AddProduct(product)
-        if (data) {
-          alert("Thêm thành công")
-          location.href = "/admin/products"
+        if (price == "") {
+          erPrice.innerHTML = "Chưa nhập giá cho sản phẩm"
         }
-        console.log("Lỗi cmnr");
-      }
-    })
-    image?.addEventListener('change', async (e) => {
-      // console.log(e.target.files)
-      const file = e.target.files[0]
-      if (file.size > 250000) {
-        vldImg.innerHTML = "File quá lớn"
+        else {
+          erPrice.innerHTML = ""
 
-      } if (file === "") {
-        vldImg.innerHTML = "Chưa thêm ảnh"
-      }
-      else {
-        vldImg.innerHTML = ""
-        plus.classList = "hidden"
-        const res = await UploadFile(file)
-        const data = res.data
-        preview.src = data.url
-      }
+        }
+        if (longDesc == "") {
+          erLong.innerHTML = "Chưa nhập mô tả dài"
+        }
+        else {
+          erLong.innerHTML = ""
 
-    })
+        }
+        if (shortDesc == "") {
+          erShort.innerHTML = "Chưa nhập mô tả ngắn cho sản phẩm"
+        } else {
+          erShort.innerHTML = ""
+
+        }
+        if (salientfeatures == "") {
+          erVip.innerHTML = "Chưa nhập đặc điểm cho sản phẩm"
+        }
+        else {
+          erVip.innerHTML = ""
+
+        }
+        if (salientfeatures == "") {
+          erVip.innerHTML = "Chưa nhập đặc điểm cho sản phẩm"
+        }
+        else {
+          erVip.innerHTML = ""
+
+        }
+        if (preview.src == "") {
+          vldImg.innerHTML = "Chưa chọn ảnh cho sản phẩm"
+        } else {
+          vldImg.innerHTML = ""
+
+        }
+        if (name != "" && price != "" && sale != "" && longDesc != "" && shortDesc != "" && salientfeatures != "") {
+          const product: Product = {
+            image: preview?.src,
+            name: name,
+            price: price,
+            sale: sale,
+            longDesc: longDesc,
+            shortDesc: shortDesc,
+            salientfeatures: salientfeatures,
+            category: category,
+            isDelete: true
+          }
+          const data = await AddProduct(product)
+          if (data) {
+            alert("Thêm thành công")
+            location.href = "/admin/products"
+          }
+          console.log("Lỗi cmnr");
+        }
+      })
+      image?.addEventListener('change', async (e) => {
+        // console.log(e.target.files)
+        const file = e.target.files[0]
+        if (file.size > 250000) {
+          vldImg.innerHTML = "File quá lớn"
+
+        } if (file === "") {
+          vldImg.innerHTML = "Chưa thêm ảnh"
+        }
+        else {
+          vldImg.innerHTML = ""
+          plus.classList = "hidden"
+          const res = await UploadFile(file)
+          const data = res.data
+          preview.src = data.url
+        }
+
+      })
+    }
+
 
   }
 }

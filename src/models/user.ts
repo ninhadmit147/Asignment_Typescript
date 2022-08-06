@@ -2,10 +2,10 @@ class User {
     email: String;
     phone: number;
     password: string;
-    _id: number;
+    id: number;
     constructor(phone: number,
-        password: string, email: String, _id: number) {
-        this._id = _id
+        password: string, email: String, id: number) {
+        this.id = id
         this.email = email
         this.phone = phone
         this.password = password

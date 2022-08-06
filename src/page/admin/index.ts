@@ -2,6 +2,7 @@ import { cate, catebyId } from "../../api/cate"
 import { List, Listbycate } from "../../api/product"
 import Header from "../../component/header/admin"
 import SidebarAdmin from "../../component/sidebar/admin"
+import { rerender } from "../../ultilities/reRender"
 
 const Admin = {
     render: async () => {
@@ -46,7 +47,7 @@ const Admin = {
                     <div class="flex-none">
                         <p class="my-1">Danh mục sản phẩm</p>
                         <select class="w-[400px] px-1 rounded-md py-2" name="" id="filter">
-                        <option value="0"> --- </option>
+                        <option value="0"> ${cateID?.data.name} </option>
                             ${categ.data.map((item: Category) => `
                             <option value="${item.id}">${item.name}</option>`).join("")}
                             <option value="0"> Tất cả sản phẩm </option>
@@ -106,15 +107,30 @@ const Admin = {
             else {
 
                 history.replaceState(null, null, `?category=${e.target.value}`)
-                location.reload()
+                rerender('#app', Admin)
             }
 
         })
+        const dataUser = localStorage.getItem("token")
+        console.log(dataUser);
+        if (dataUser?.length == "") {
+            location.href = "/"
+        }
+
         //Check
         // const check = document.querySelectorAll("#default-toggle")
         // for (let chekced of check) {
         //     const status = check
         // }
+
+        const btnOut = document.querySelector("#logout")
+        btnOut?.addEventListener('click', function () {
+            console.log("hahahah");
+
+            localStorage.clear()
+            location.href = "/signin"
+        })
+
     }
 }
 

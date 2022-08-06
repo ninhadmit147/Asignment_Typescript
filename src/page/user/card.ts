@@ -2,6 +2,9 @@ import HeaderUser from "../../component/header/header"
 
 const Card = {
     render: () => {
+        // localStorage.setItem('cart', JSON.stringify(product.data))
+        const showcart = JSON.parse(localStorage.getItem('cart'))
+        console.log(showcart.name);
         return `
         ${HeaderUser.render()}
         <!-- card begin -->
@@ -15,26 +18,26 @@ const Card = {
             <label class="text-2xl font-bold text-red-500" for="">Giỏ hàng</label>
             <label for=""></label>
         </div>
+        
         <div class="w-[570px] h-[250px] bg-white drop-shadow-md rounded-md mx-auto">
             <div class="grid grid-cols-3 gap-4 p-2">
                 <div class="mx-auto p-4">
-                    <img src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5_4.jpg"
+                    <img src="${showcart.image}"
                         width="193px" height="193px" alt="">
                 </div>
                 <div class="col-span-2">
                     <div class="mx-2">
-                        <label class="text-xl font-semibold" for="">Iphone 13 chính hãng VN/A</label><br>
-                        <label class="text-red-500 font-medium" for="">18.900.000đ</label><br>
+                        <label class="text-xl font-semibold" for="">${showcart.name}</label><br>
+                        <label class="text-red-500 font-medium" for="">${showcart.sale}</label><br>
                         <label class="font-normal" for="">
                             Chọn số lượng <input class="border border-black w-[100px] mx-4" type="number">
                         </label>
                     </div>
-                    <div class="w-[345px] h-[140px] bg-gray-200 border border-solid rounded-md mx-auto mt-4 font-normal">
+                    <div class="w-[345px] max-  h-[110px] bg-gray-200 border border-solid rounded-md mx-auto mt-4 font-normal">
                         <div class="mx-4">
                         <p> - Chương trình khuyến mãi :</p>
-                        <label for="">
-                            Dịch vụ phòng chờ hạng thương gia tại sân bay.
-                            Ưu đãi Galaxy gift lên đến 1.700.000đ (VieON VIP HBO GO, Zing MP3, Phúc Long, Galaxy Play)
+                        <label id="short" for="">
+                        ${showcart.shortDesc}
                         </label>
                     </div>
                 </div>
@@ -42,30 +45,6 @@ const Card = {
             </div>
         </div>
         <div class="w-[570px] h-[250px] bg-white border drop-shadow-md rounded-md mx-auto mt-2">
-            <div class="grid grid-cols-3 gap-4 p-2">
-                <div class="mx-auto p-4">
-                    <img src="https://synnexfpt.com/wp-content/uploads/2022/06/Apple-iPhone-12-mini-64GB-2.jpg"
-                        width="193px" height="193px" alt="">
-                </div>
-                <div class="col-span-2">
-                    <div class="mx-2">
-                        <label class="text-xl font-semibold" for="">Iphone 12 chính hãng VN/A</label><br>
-                        <label class="text-red-500 font-medium" for="">15.900.000đ</label><br>
-                        <label class="font-normal" for="">
-                            Chọn số lượng <input class="border border-black w-[100px] mx-4" type="number">
-                        </label>
-                    </div>
-                    <div class="w-[345px] h-[140px] bg-gray-200 border border-solid rounded-md mx-auto mt-4 font-normal">
-                        <div class="mx-4">
-                        <p> - Chương trình khuyến mãi :</p>
-                        <label for="">
-                            Dịch vụ phòng chờ hạng thương gia tại sân bay.
-                            Ưu đãi Galaxy gift lên đến 1.700.000đ (VieON VIP HBO GO, Zing MP3, Phúc Long, Galaxy Play)
-                        </label>
-                    </div>
-                </div>
-                </div>
-            </div>
             <div class="flex justify-between ">
                    <p class="font-semibold">Tổng tiền tạm tính</p>
                    <p class="text-red-500">34.800.000 đ</p>

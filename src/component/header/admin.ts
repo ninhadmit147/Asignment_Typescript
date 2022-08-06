@@ -11,7 +11,7 @@ const Header = {
             <button type="submit" class="bg- h-10 rounded-r-md bg-white border-l-2 px-2">Tìm kiếm</button>
           </form>
           <div class="text-white my-6 mx-3">
-          <a href="/">Loguot</a>
+          <button id="logout">Loguot</button>
             Xin chào Ning
           </div>
     </div>

@@ -13,27 +13,6 @@ const DetailProd = {
     const ProdByCate = await Listbycate(idCate)
     const resProdByCate: Product = ProdByCate.data
 
-    const dtPrice = res.price
-    const price = new Number(dtPrice)
-    console.log(price);
-
-
-    const newData = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price)
-    console.log(newData);
-
-    const dtSale = res.sale
-    const sale = new Number(dtSale)
-    console.log(price);
-
-
-    const newSale = new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(sale)
-    console.log(newSale);
-
-    // const price = resProdByCate.price
-    // const format = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price)
-    // console.log(price);
-
-    // console.log(format);
 
     return /*html*/ `
         ${HeaderUser.render()}
@@ -81,7 +60,7 @@ const DetailProd = {
       <!-- Show body -->
       <div class="col-span-3 items-end">
         <div class="">
-          <div class="flex">
+          <div class="">
             <div  class="text-2xl text-red-500">
               <div id="sale">${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(res.sale)}</div>
       </div>
@@ -97,18 +76,18 @@ const DetailProd = {
         <a href="#" >
           <div class="bg-red-500 px-20 py-[20px] text-white rounded-sm" > Mua Ngay </div>
         </a>
-        <a href = "#" >
+        <button id="add-cart">
         <div class="border border-red-500 text-red-500 w-[65px] h-[65px] mx-4 rounded-md" >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8  mx-auto mt-4" fill = "none" viewBox = "0 0 24 24" stroke = "currentColor" stroke - width="2" >
               <path stroke - linecap="round" stroke - linejoin="round" d = "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
         </div>
-        </a>
+  </button>
             <div class="w-20 text-lg text-center font-medium" >
               Thêm vào giỏ hàng
             </div>
-          </div>
         </div>
+  </div>
       </div>
   </div>  
   </div>
@@ -126,41 +105,49 @@ const DetailProd = {
               </div>
               <div class="px-5 font-medium">
                   ${item.name}
-                                      </div>
-                                      <div class="flex px-5 py-1">
-                                        <div class="text-red-500 text-lg">
-                                          ${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.sale)}
-                                        </div>
-                                        <div class="text-gray-500 mx-2">
-                                        ${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.price)}
-                                        </div>
-                                      </div>
-                                      <div class="text-center pb-3">
-                                        0 Đánh giá
-                                      </div>
-                                    </div>
-                                  </a>
-                                `).join("")}
-                                </div>
-                                  </div>
-                                      <div class="container mx-auto bg-gray-100 rounded-md py-5" >
-                                        <h1 class="text-red-500 text-base font-semibold text-center pb-5" >
-                                          ĐẶC ĐIỂM NỔI BẬT
-                                            </h1>
-                                            <p class="mx-10" >
-                                              ${res.salientfeatures}
-                                            </p>
-                                      </div>
+              </div>
+              <div class="flex px-5 py-1">
+                <div class="text-red-500 text-lg">
+                  ${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.sale)}
+                </div>
+              <div class="text-gray-500 mx-2">
+                ${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.price)}
+              </div>
+              </div>
+              </div>
+        </a>
+        `).join("")}
+        </div>
+        </div>
+        <div class="container mx-auto bg-gray-100 rounded-md py-5" >
+          <h1 class="text-red-500 text-base font-semibold text-center pb-5" >
+            ĐẶC ĐIỂM NỔI BẬT
+          </h1>
+          <p class="mx-10" >
+            ${res.salientfeatures}
+          </p>
+        </div>
 
-                                      <div class="container mx-auto mt-5 mb-36" >
-                                        ${res.longDesc}
-                                      </div>
+        <div class="container mx-auto mt-5 mb-36" >
+          ${res.longDesc}
+        </div>
 
-                                    ${Footer.render()}
-                                `
+        ${Footer.render()}
+        `
   },
-  afterRender: () => {
+  afterRender: (id) => {
+    const addCart = document.querySelector("#add-cart")
+    addCart?.addEventListener('click', async function () {
+      const product = await Read(id)
+      console.log(product.data)
+      let cart = []
+      localStorage.setItem('cart', JSON.stringify(product.data))
+      const showcart = localStorage.getItem('cart')
+      console.log(showcart.name);
 
+
+
+    })
 
 
   }

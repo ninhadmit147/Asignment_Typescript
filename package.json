@@ -10,6 +10,7 @@
     "server": "json-server-auth --watch db.json --port 3001"
   },
   "devDependencies": {
+    "@types/validator": "^13.7.5",
     "autoprefixer": "^10.4.7",
     "json-server": "^0.17.0",
     "json-server-auth": "^2.1.0",
@@ -20,6 +21,8 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "navigo": "^8.11.1"
+    "jsonwebtoken": "^8.5.1",
+    "navigo": "^8.11.1",
+    "validator": "^13.7.0"
   }
 }
