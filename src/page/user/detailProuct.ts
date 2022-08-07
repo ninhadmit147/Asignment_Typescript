@@ -139,14 +139,31 @@ const DetailProd = {
     const addCart = document.querySelector("#add-cart")
     addCart?.addEventListener('click', async function () {
       const product = await Read(id)
-      console.log(product.data)
-      let cart = []
-      localStorage.setItem('cart', JSON.stringify(product.data))
-      const showcart = localStorage.getItem('cart')
-      console.log(showcart.name);
+      const data = product.data
+      // console.log(product.data)
+      // let cart = []
+      // localStorage.setItem('cart', JSON.stringify(product.data))
+      // const showcart = localStorage.getItem('cart')
+      // console.log(showcart);
+      // cart = [showcart]
+      // console.log(cart);
+      // alert('Giỏ hàng +1')
 
 
+      // get existed data
 
+      const cart = JSON.parse(localStorage.getItem("cart"))
+      if (cart) {
+        const index = cart.findIndex(x => x.id === data.id)
+        if (index === -1) {
+          cart.push(data)
+        }
+        localStorage.setItem("cart", JSON.stringify([...cart]))
+      } else {
+        localStorage.setItem("cart", JSON.stringify([data.id]))
+      }
+      const newCart = JSON.parse(localStorage.getItem("cart"))
+      console.log(newCart, "localstorage");
     })
 
 

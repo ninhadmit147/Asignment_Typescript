@@ -128,18 +128,6 @@
       "category": "2",
       "isDelete": true,
       "id": 10
-    },
-    {
-      "image": "http://res.cloudinary.com/thisisninh/image/upload/v1659723830/295640489_760807318473308_3045313408014350095_n_xn94pa.jpg",
-      "name": "Mai Kha Ninh",
-      "price": "300000",
-      "sale": "20000",
-      "longDesc": "qeqweqwe",
-      "shortDesc": "qưqww",
-      "salientfeatures": "eqqwe",
-      "category": "2",
-      "isDelete": true,
-      "id": 11
     }
   ],
   "category": [

@@ -1,10 +1,5 @@
 const HeaderUser = {
   render: () => {
-    const hiddenAuto = document.querySelector("#lognuot")
-    console.log(localStorage.getItem('user'));
-    if (localStorage.getItem('user')) {
-      hiddenAuto?.classList("")
-    }
     return `
         <div class="h-[64px] bg-[#D70018]">
       <!-- Header -->
@@ -12,13 +7,13 @@ const HeaderUser = {
         <a href="/">
           <img class="w-[200px] -mb-2" src="https://res.cloudinary.com/thisisninh/image/upload/v1659420756/cellphones-logo_lsv99x.png" alt="">
         </a>
-        <div id="" class="my-4 mx-10 bg-white rounded-md flex border-black border" >
+        <div id="" class="my-4 xl:w-[500px] mx-10 bg-white rounded-md flex border-black border" >
           <button id="search"  class="border-black border-r" type="submit">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6  mx-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
         </button>
-          <input type="text" class="w-[533px] h-[34px] rounded-md border-black" name="" id="inpSearch">
+          <input type="text" class="w-full h-[34px] rounded-md border-black" name="" id="inpSearch">
         </div>
         <div class="text-white flex">
           <a class="my-2 mx-6" href="#">Gọi mua hàng<br> 1800.2097</a>

@@ -88,7 +88,7 @@ const HomePage = {
     <div class="grid 2xl:grid-cols-7 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-3 mx-10">
       ${res.map((item: Product) => `
       <a href="/product/${item.id}">
-            <div class="p-3 drop-shadow-md border rounded-md min-h-[450px]">
+            <div class="p-3 drop-shadow-md border rounded-md min-h-[410px]">
           <img class="p-1 w-11/12 h-[200px] mx-auto" src="${item.image}" alt="">
           <div id="name">${item.name}</div>
           <div class="my-3 flex">

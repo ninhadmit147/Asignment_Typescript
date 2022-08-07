@@ -27,6 +27,7 @@ const Signup = {
                 <button  class="w-[400px] h-[48px] border bg-[#FF424E] text-white rounded-md" id="btn-signup">Đăng ký</button>
                 <br>
                 <a class="text-blue-500 hover:underline" href="/signin">Đăng nhập</a>
+                <a class="text-blue-500 hover:underline" href="/">Trang chủ</a>
                 </div>
             <div class="bg-gray-200 h-[506px] rounded-r-md">
                 <img class="w-2/5 mx-auto my-[210px]" src="public/290707804_583841913337957_8588693790177220222_n.png" alt="">

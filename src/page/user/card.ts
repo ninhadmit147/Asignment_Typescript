@@ -3,8 +3,10 @@ import HeaderUser from "../../component/header/header"
 const Card = {
     render: () => {
         // localStorage.setItem('cart', JSON.stringify(product.data))
-        const showcart = JSON.parse(localStorage.getItem('cart'))
-        console.log(showcart.name);
+        const item = JSON.parse(localStorage.getItem('cart'))
+        console.log(item);
+
+
         return `
         ${HeaderUser.render()}
         <!-- card begin -->
@@ -18,17 +20,17 @@ const Card = {
             <label class="text-2xl font-bold text-red-500" for="">Giỏ hàng</label>
             <label for=""></label>
         </div>
-        
+        ${item.map((item) => `
         <div class="w-[570px] h-[250px] bg-white drop-shadow-md rounded-md mx-auto">
             <div class="grid grid-cols-3 gap-4 p-2">
                 <div class="mx-auto p-4">
-                    <img src="${showcart.image}"
+                    <img src="${item.image}"
                         width="193px" height="193px" alt="">
                 </div>
                 <div class="col-span-2">
                     <div class="mx-2">
-                        <label class="text-xl font-semibold" for="">${showcart.name}</label><br>
-                        <label class="text-red-500 font-medium" for="">${showcart.sale}</label><br>
+                        <label class="text-xl font-semibold" for="">${item.name}</label><br>
+                        <label class="text-red-500 font-medium" for="">${item.sale}</label><br>
                         <label class="font-normal" for="">
                             Chọn số lượng <input class="border border-black w-[100px] mx-4" type="number">
                         </label>
@@ -37,12 +39,14 @@ const Card = {
                         <div class="mx-4">
                         <p> - Chương trình khuyến mãi :</p>
                         <label id="short" for="">
-                        ${showcart.shortDesc}
+                        ${item.shortDesc}
                         </label>
                     </div>
                 </div>
                 </div>
             </div>
+        `)}
+        
         </div>
         <div class="w-[570px] h-[250px] bg-white border drop-shadow-md rounded-md mx-auto mt-2">
             <div class="flex justify-between ">
