@@ -21,8 +21,11 @@ const HomePage = {
       data = await List()
 
     }
-    const res: Product = data.data
 
+    const res: Product = data.data
+    const newRes = res.filter(function (prod) {
+      return prod.isDelete == false
+    })
 
     return `
         ${HeaderUser.render()}
@@ -86,7 +89,7 @@ const HomePage = {
 
     </div>
     <div class="grid 2xl:grid-cols-7 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-3 mx-10">
-      ${res.map((item: Product) => `
+      ${newRes.map((item: Product) => `
       <a href="/product/${item.id}">
             <div class="p-3 drop-shadow-md border rounded-md min-h-[410px]">
           <img class="p-1 w-11/12 h-[200px] mx-auto" src="${item.image}" alt="">
@@ -126,6 +129,11 @@ const HomePage = {
       rerender('#app', HomePage)
 
 
+    })
+    const logout = document.querySelector("#lognout")
+    logout?.addEventListener('click', function () {
+      localStorage.clear()
+      location.href = "/signin"
     })
   }
 

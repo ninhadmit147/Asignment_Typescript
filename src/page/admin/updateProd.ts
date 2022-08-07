@@ -6,6 +6,14 @@ import SidebarAdmin from "../../component/sidebar/admin"
 
 const UpdateProd = {
   render: async (_id: number) => {
+    const user = JSON.parse(localStorage.getItem('user'))
+    if (!user) {
+      location.href = "/signin"
+    }
+    if (user.role != 1) {
+      alert("Bạn không phải Admin")
+      location.href = "/"
+    }
     const listcate: Category = await cate()
 
 

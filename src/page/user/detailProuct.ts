@@ -138,23 +138,16 @@ const DetailProd = {
   afterRender: (id) => {
     const addCart = document.querySelector("#add-cart")
     addCart?.addEventListener('click', async function () {
+
+      //get data product
       const product = await Read(id)
       const data = product.data
-      // console.log(product.data)
-      // let cart = []
-      // localStorage.setItem('cart', JSON.stringify(product.data))
-      // const showcart = localStorage.getItem('cart')
-      // console.log(showcart);
-      // cart = [showcart]
-      // console.log(cart);
-      // alert('Giỏ hàng +1')
 
 
-      // get existed data
-
+      //set data cart
       const cart = JSON.parse(localStorage.getItem("cart"))
       if (cart) {
-        const index = cart.findIndex(x => x.id === data.id)
+        const index = cart.findIndex(x => x.id == data.id)
         if (index === -1) {
           cart.push(data)
         }
@@ -164,6 +157,8 @@ const DetailProd = {
       }
       const newCart = JSON.parse(localStorage.getItem("cart"))
       console.log(newCart, "localstorage");
+
+      alert("Đã thêm vào giỏ hàng")
     })
 
 

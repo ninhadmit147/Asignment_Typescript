@@ -20,9 +20,11 @@ const Signin = {
                 </div>
                 <button id="btn-signin" class="w-[400px] h-[48px] border bg-[#FF424E] text-white rounded-md">Đăng nhập</button>
                 <br>
-                <a class="text-blue-500 hover:underline" href="/signup">Đăng ký ngay</a>
-                <a class="text-blue-500 hover:underline" href="/">Trang chủ</a>
-
+                <div class="justify-between mt-5 flex">
+                    <a class="text-blue-500 hover:underline" href="/signup">Đăng ký ngay</a>
+                    <a class="text-blue-500 hover:underline" href="/">Trang chủ</a>
+                </div>
+                
             </div>
             <div class="bg-gray-200 h-[505px] rounded-r-md">
                 <img class="w-[185px] mx-auto my-[170px]" src="public/290707804_583841913337957_8588693790177220222_n.png" alt="">
