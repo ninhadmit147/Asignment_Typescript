@@ -16,7 +16,9 @@ const HeaderUser = {
         </svg>
       </button>
         <input type="text" class="w-full h-[34px] rounded-md border-black" name="" id="inpSearch">
-      </div>
+        <br>
+        </div>
+        <div class="hidden" id="sugges"></div>
       <div class="text-white flex">
         <a class="my-2 mx-6" href="#">Gọi mua hàng<br> 1800.2097</a>
         <a class="flex w-[150px] my-2" href="#"><svg xmlns="http://www.w3.org/2000/svg" class="my-1  h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -41,11 +43,7 @@ const HeaderUser = {
         <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
         </svg>
         </a>
-        <a id="lognout" class="hidden w-[100px] my-2 " href="/signin">
-        <svg xmlns="http://www.w3.org/2000/svg"  class="h-10 w-10 my-1 mx-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-        </svg>
-        </a>
+        
       </div>  
     </div>
    </div>
@@ -66,6 +64,7 @@ const HeaderUser = {
         </svg>
       </button>
         <input type="text" class="w-full h-[34px] rounded-md border-black" name="" id="inpSearch">
+        <div id="sugges"></div>
       </div>
       <div class="text-white flex">
         <a class="my-2 mx-6" href="#">Gọi mua hàng<br> 1800.2097</a>
@@ -86,6 +85,11 @@ const HeaderUser = {
           </svg>
           Giỏ hàng
         </a>
+        <a class="flex w-[50px] my-2 " href="/admin/products">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 my-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+      </svg>
+        </a>
         <button id="lognout" class="flex w-[100px] my-2 ">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 my-1 mx-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
@@ -99,7 +103,11 @@ const HeaderUser = {
 
   },
   afterRender: () => {
-
+    const logout = document.querySelector("#lognout")
+    logout?.addEventListener('click', function () {
+      localStorage.removeItem('user')
+      location.href = "/signin"
+    })
   }
 }
 export default HeaderUser

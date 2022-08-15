@@ -7,15 +7,10 @@ const HomePage = {
   render: async () => {
     var data
     const queryString = window.location.search;
-    console.log(queryString);
-
     const urlParams = new URLSearchParams(queryString);
     const rescate = urlParams.get('q')
-    console.log(rescate);
     if (rescate) {
       data = await Filter(rescate)
-      console.log(data);
-
     }
     else {
       data = await List()
@@ -117,22 +112,37 @@ const HomePage = {
   },
   afterRender: () => {
 
-    const btnSearch = document.querySelector("#search")
-    // console.log(hiddenAuto);
+    //Sugges
 
+    // const inputSearch = document.querySelector("#inpSearch")
+    // inputSearch?.addEventListener('keyup', async function () {
+    //   console.log(inputSearch?.value);
+    //   const res = await List()
+    //   const resdata: Product = res.data
+    //   const newRes = resdata.filter(function (prod) {
+    //     return prod.name !== inputSearch?.value
+    //   })
+    //   console.log(newRes);
+
+    // const formSugges = document.querySelector("#sugges")
+    // formSugges.classList = `bg-white w-[300px] h-[100px]`
+    // formSugges.innerHTML = return `
+    // ${}      `
+
+    // })
+    //Search
+    const btnSearch = document.querySelector("#search")
     btnSearch?.addEventListener('click', async function () {
       const inputSearch = document.querySelector("#inpSearch")?.value
       console.log(inputSearch);
       history.replaceState(null, null, `?q=${inputSearch}`)
-
-      // location.reload()
       rerender('#app', HomePage)
-
-
     })
+
+    //Logout
     const logout = document.querySelector("#lognout")
     logout?.addEventListener('click', function () {
-      localStorage.clear()
+      localStorage.removeItem('user')
       location.href = "/signin"
     })
   }

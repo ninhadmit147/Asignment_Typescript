@@ -41,7 +41,7 @@ const Card = {
                 </div>
                 <div class="col-span-2">
                     <div class="mx-2">
-                        <label class="text-xl font-semibold" for="">${item.name}</label><br>
+                        <label id="name" class="text-xl font-semibold" for="">${item.name}</label><br>
                         <label class="text-red-500 font-medium" for=""> ${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.sale)}</label><br>
                     </div>
                     <div class="w-[345px] max-  h-[110px] bg-gray-200 border border-solid rounded-md mx-auto mt-4 font-normal">
@@ -107,16 +107,12 @@ const Card = {
 
     },
     afterRender: () => {
+        //remove product
         const btns = document.querySelectorAll(".container #del")
-
         let cart = JSON.parse(localStorage.getItem('cart'))
-        // const item = cart.data
         console.log(cart);
-
         for (let btn of btns) {
             const id = btn.dataset.id
-
-            // cart = cart.filter(item = item.id != id)
             btn.addEventListener('click', async function () {
                 // localStorage.removeItem('cart', 'id'=>id)
                 const action = window.confirm("Bạn có muốn xóa sản phẩm khỏi giỏ hàng ?")

@@ -39,6 +39,7 @@ const Signup = {
     },
     afterRender: async () => {
         const submit = document.querySelector("#btn-signup")
+        // Set data & validate
         const formField = [
             "email", "phone", "password"
         ]
@@ -70,6 +71,7 @@ const Signup = {
             temp.classList.remove("hidden");
             temp.textContent = message;
         }
+        // Add new user
         submit.onclick = async function () {
             const { error, data } = validate()
             console.log(data);
@@ -82,7 +84,7 @@ const Signup = {
                         location.href = "/signin"
                     }
                 } catch (error) {
-                    alert(error.message)
+                    alert("Email này đã được sử dụng")
                 }
             }
         }

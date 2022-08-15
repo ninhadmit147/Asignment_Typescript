@@ -200,7 +200,7 @@ const UpdateProd = {
           shortDesc: shortDesc,
           salientfeatures: salientfeatures,
           category: category,
-          isDelete: true
+          isDelete: false
         }
         console.log(product);
 

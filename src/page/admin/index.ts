@@ -77,7 +77,7 @@ const Admin = {
                         ${res.map((item: Product, index: number) => `
                         <tr id="list" class="border-t-[1px] border-gray-500 h-[160px] p-1">
                         <td >${index + 1}</td>
-                        <td  class="w-[15%]">${item.name}</td>
+                        <td  class="w-[15%] mx-1">${item.name}</td>
                         <td><img class="w-[100px] mx-auto m-3" src="${item.image}"/></td>
                         <td class="text-center w-24 px-5" id="price_prod">${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.price)}</td>
                         <td id="short" class="w-[100%] px-5">${item.shortDesc}</td>
@@ -156,7 +156,7 @@ const Admin = {
         btnOut?.addEventListener('click', function () {
             console.log("hahahah");
 
-            localStorage.clear()
+            localStorage.removeItem('user')
             location.href = "/signin"
         })
 

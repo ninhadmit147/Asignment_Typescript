@@ -188,7 +188,7 @@ const AddProd = {
           shortDesc: shortDesc,
           salientfeatures: salientfeatures,
           category: category,
-          isDelete: true
+          isDelete: false
         }
         const data = await AddProduct(product)
         if (data) {

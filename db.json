@@ -12,6 +12,18 @@
       "password": "$2a$10$NK10PzLc1WktiU05.I7yA.NANUlYv3GEH6rOgYrHAi5dGgG1W17DO",
       "phone": "0363480678",
       "id": 2
+    },
+    {
+      "email": "ninh147@gmail.com",
+      "password": "$2a$10$NIQx/3uLzKEqL5ApCewIIOjxLdakj2diZGa/wC0XR4i0SzVtU3ake",
+      "phone": "0363480678",
+      "id": 3
+    },
+    {
+      "email": "newacc147@gmail.com",
+      "password": "$2a$10$K78nZxnCuPjWwOf0KjOx.eJDUsFzuX88hEz/X09T/k7zl4qoJ1/lu",
+      "phone": "0363480678",
+      "id": 4
     }
   ],
   "products": [
@@ -25,7 +37,7 @@
       "shortDesc": "Apple luôn làm hài lòng tín đồ iFan với các dòng iPhone trong từng phân khúc giá. Đặc biệt, phiên bản iPhone 11 vừa ra mắt nhưng đã chiếm lĩnh được thị trường smartphone trên toàn thế giới với giá cả phải chăng. Cùng tìm hiểu chi tiết rõ hơn qua bài viết sau đây để có quyết định có nên mua hay không nhé!",
       "salientfeatures": "    Màu sắc phù hợp cá tính - 6 màu sắc bắt mắt để lựa chọn Hiệu năng mượt mà, ổn định - Chip A13, RAM 4GB Bắt trọn khung hình - Camera kép hỗ trợ góc rộng, chế độ Night Mode Yên tâm sử dụng - Kháng nước, kháng bụi IP68, kính cường lực Gorilla",
       "category": "1",
-      "isDelete": false
+      "isDelete": true
     },
     {
       "id": 2,
@@ -143,6 +155,18 @@
       "longDesc": "  fsfcrfasecrdxsrfczex dAWSZCEFRXD$ ",
       "shortDesc": "wseflhbujsf ikln/ú drfclujniksdvr cgujiknhdcsgv zrfiklnuj",
       "salientfeatures": "  efcscwszrfdex aszrfc dxvscd xrfv szrfcvdex",
+      "category": "3",
+      "isDelete": true
+    },
+    {
+      "id": 12,
+      "image": "http://res.cloudinary.com/thisisninh/image/upload/v1659947498/290806480_2881116328863522_4182050562083169719_n_da82ta.jpg",
+      "name": "Power",
+      "price": "300000",
+      "sale": "20000",
+      "longDesc": " ư4ar4earw4er4resres4res",
+      "shortDesc": "fews fesw esfd esesfz c",
+      "salientfeatures": " earaewaewrweaaewrzc",
       "category": "3",
       "isDelete": true
     }

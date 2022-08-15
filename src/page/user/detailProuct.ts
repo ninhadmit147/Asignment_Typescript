@@ -5,15 +5,17 @@ import HeaderUser from "../../component/header/header"
 
 const DetailProd = {
   render: async (id: any) => {
+    //Call API 
     const data = await Read(id)
     const res: Product = data.data
     const idCate = res.category
     const dataCate = await catebyId(idCate)
     const resCate: Category = dataCate.data
     const ProdByCate = await Listbycate(idCate)
-    const resProdByCate: Product = ProdByCate.data
-
-
+    //Filter similar products
+    const resProdByCate: Product = ProdByCate.data.filter(function (prod) {
+      return prod.isDelete == false && prod.id != id
+    })
     return /*html*/ `
         ${HeaderUser.render()}
         <div class="bg-gray-100 drop-shadow-md py-2">
@@ -63,8 +65,8 @@ const DetailProd = {
           <div class="">
             <div  class="text-2xl text-red-500">
               <div id="sale">${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(res.sale)}</div>
-      </div>
-      <div  class="text-gray-500 mt-2 ml-2" >
+            </div>
+      <div class="text-gray-500 mt-2 ml-2" >
         <div id="price" > ${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(res.price)} </div>
           <div>
           </div>
@@ -136,15 +138,16 @@ const DetailProd = {
         `
   },
   afterRender: (id) => {
+
+    //Add event btn add-cart
     const addCart = document.querySelector("#add-cart")
     addCart?.addEventListener('click', async function () {
 
-      //get data product
+      // Call API data product
       const product = await Read(id)
       const data = product.data
 
-
-      //set data cart
+      //Set data cart
       const cart = JSON.parse(localStorage.getItem("cart"))
       if (cart) {
         const index = cart.findIndex(x => x.id == data.id)
