@@ -37,7 +37,7 @@
       "shortDesc": "Apple luôn làm hài lòng tín đồ iFan với các dòng iPhone trong từng phân khúc giá. Đặc biệt, phiên bản iPhone 11 vừa ra mắt nhưng đã chiếm lĩnh được thị trường smartphone trên toàn thế giới với giá cả phải chăng. Cùng tìm hiểu chi tiết rõ hơn qua bài viết sau đây để có quyết định có nên mua hay không nhé!",
       "salientfeatures": "    Màu sắc phù hợp cá tính - 6 màu sắc bắt mắt để lựa chọn Hiệu năng mượt mà, ổn định - Chip A13, RAM 4GB Bắt trọn khung hình - Camera kép hỗ trợ góc rộng, chế độ Night Mode Yên tâm sử dụng - Kháng nước, kháng bụi IP68, kính cường lực Gorilla",
       "category": "1",
-      "isDelete": true
+      "isDelete": false
     },
     {
       "id": 2,
@@ -131,7 +131,7 @@
       "shortDesc": "Đúng như các thông tin được đồn đoán trước đó, mẫu flagship mới của gả khổng lồ Hàn Quốc được ra mắt với tên gọi là Samsung Galaxy S22 Ultra với nhiều cải tiến đáng giá. Mẫu điện thoại cao cấp đến từ Samsung này có nhiều thay đổi từ thiết kế, cấu hình cho đến camera. Vậy siêu phẩm này có gì mới, giá bao nhiêu và có nên mua không? Hãy cùng tìm hiểu chi tiết ngay bên dưới nhé!",
       "salientfeatures": "Vi xử lý mạnh mẽ nhất Galaxy - Snapdragon 8 Gen 1 (4 nm)\nCamera mắt thần bóng đêm Nightography - Chụp đêm cực đỉnh\nS Pen đầu tiên trên Galaxy S - Độ trễ thấp, dễ thao tác\nDung lượng pin bất chấp ngày đêm - Viên pin 5000mAh, sạc nhanh 45W",
       "category": "1",
-      "isDelete": false,
+      "isDelete": true,
       "id": 9
     },
     {
@@ -169,6 +169,18 @@
       "salientfeatures": " earaewaewrweaaewrzc",
       "category": "3",
       "isDelete": true
+    },
+    {
+      "image": "http://res.cloudinary.com/thisisninh/image/upload/v1660627143/Untitled_wgrta9.jpg",
+      "name": "Màn hình đồ hoạ HUAWEI MateView 28",
+      "price": "18990000",
+      "sale": "18990000",
+      "longDesc": "Màn hình sang trọng, tỉ lệ 3:2 độc đáo\nHuawei Mateview sở hữu một thiết kế tối giản với phần khung và chân đế được hoàn thiện từ hợp kim nhôm cao cấp cùng khung viền siêu mỏng mang lại không gian hiển thị lớn hơn. Màn hình đồ họa này với tỉ lệ hiển thị trên thân máy lên tới 94%.\n>>> Xem thêm: Màn hình Huawei Mateview GT thiết kế sáng tạo cùng độ hiển thị vượt trội\n \nMàn hình máy tính Huawei Mateview này có tỉ lệ hiển thị 3:2 nổi bật, khác với tỉ lệ 16:9 tiêu chuẩn trên các dòng màn hình khác hiện có trên thị trường. Tỉ lệ này cho phép màn hình tối ưu hiển thị theo chiều dọc, nhờ đó người dùng có thể xem được nhiều thông tin hơn mà không cần cuộn màn hình.\nHiển thị sắc nét, gàm màu DCI-P3 98%\nMàn hình Huawei Mateview được trang bị độ phân giải cao mang lại khả năng hiển thị sắc nét. Màn hình với mật độ điểm ảnh cao cùng gam màu DCI-P3 98% mang lại dải màu rộng, đáp ứng tốt các nhu cầu chỉnh sửa với dài màu chân thực và chính xác tới ∆E<2.\n \nNgoài tam với chứng nhận Display HDR 400, màn hình HUAWEI MateView giúp tối ưu hóa màu sắc. Cùng với đó là độ sáng tối đa lên đến 500 nits giúp hiển thị rõ ràng đến từng chi tiết.\nMàn hình Huawei Mateview còn được trang bị tính năng bảo vật mắt TUV Rheinland giúp đôi mắt người dùng khỏe hơn.\nKết nối không dây tiện lợi, thanh tác vụ thông minh\n \nMàn hình Huawei Mateview sở hữu một kết nối không dây thông minh, Với thanh tác vụ Smart Bar, người dùng có thể chuyển đổi nhanh chóng từ màn hình trình chiếu sang máy tính xác tay, điện thoại hoặc ngược lại. Lưu ý, kết nối chỉ khả dụng trên model phiên bản không dây ( HSN – CBA)\nMua màn hình Huawei Mateview giá rẻ tại CellphoneS\nMàn hình Huawei Mateview chính hãng với kích thước lớn, độ chính xác cao sẽ là một màn hình chuyên dùng cho dân đồ họa chuyên nghiệp. nếu bạn đang tìm một mẫu màn hình như vậy cho công việc, đến ngay CellphoneS để mua ngay với giá ưu đãi cùng nhiều khuyến mãi hấp dẫn.\n",
+      "shortDesc": "Công việc đồ họa đòi hỏi các yêu cầu cao về màn hình, đặc biệt là màu sắc. Màn hình Huawei Mateview được Huawei thiết kế dành riêng vời nhiều công nghệ màn hình và màu sắc, thích hợp với công việc đồ họa chuyên nghiệp.",
+      "salientfeatures": "•\tMàn Hình 4K+ Trung Thực trải nghiệm hình ảnh sống động, sắc nét\n•\tHUAWEI Smart Bar điều khiển cảm ứng trực quan, dễ dàng tương tác\n•\tKết nối liền mạch giữa các thiết bị, trình chiếu không dây nâng tầm hiệu quả\n•\tThiết kế thanh lịch, tối giản hoà hợp với mọi không gian làm việc.\n",
+      "category": "4",
+      "isDelete": false,
+      "id": 13
     }
   ],
   "category": [

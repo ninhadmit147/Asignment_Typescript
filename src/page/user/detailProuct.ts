@@ -152,16 +152,12 @@ const DetailProd = {
       if (cart) {
         const index = cart.findIndex(x => x.id == data.id)
         if (index === -1) {
-          cart.push(data)
+          localStorage.setItem([...cart])
+        } else {
+          localStorage.setItem()
         }
-        localStorage.setItem("cart", JSON.stringify([...cart]))
-      } else {
-        localStorage.setItem("cart", JSON.stringify([data.id]))
-      }
-      const newCart = JSON.parse(localStorage.getItem("cart"))
-      console.log(newCart, "localstorage");
 
-      alert("Đã thêm vào giỏ hàng")
+      }
     })
 
 

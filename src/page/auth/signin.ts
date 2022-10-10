@@ -1,5 +1,5 @@
 import validator from "validator"
-import { infoUser, signin } from "../../api/auth"
+import { signin } from "../../api/auth"
 const Signin = {
     render: () => {
         return `
