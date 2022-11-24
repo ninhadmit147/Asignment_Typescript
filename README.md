@@ -1,10 +1,10 @@
 # Assignment_Typescript
 # Get started
-  Cài đặt node module đê chạy dự án
+  Install node module to run the project
   > npm install
   
-  Tiếp theo để bắt đầu dự án 
+  Next to start the project
   > npm run dev
   
-  Cuối cùng fake API
+  Finally fake API
   > npm run server
