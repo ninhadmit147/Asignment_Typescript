@@ -7,6 +7,9 @@ export const List = () => {
 export const Read = (id: number) => {
     return instance.get(`/products/${id}`)
 }
+export const Remove = (id: number) => {
+    return instance.delete(`/products/${id}`)
+}
 export const Update = (product: Product[]) => {
     return instance.put(`/products/${product.id}`, product)
 }

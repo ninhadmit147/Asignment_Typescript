@@ -71,6 +71,7 @@ const Signin = {
             const { error, data } = validate()
             if (!error) {
                 try {
+                    console.log(data);
                     const res = await signin(data)
                     localStorage.setItem('user', JSON.stringify(res.data.user))
                     console.log(res.data);

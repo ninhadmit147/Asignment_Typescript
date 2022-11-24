@@ -83,7 +83,7 @@ const HomePage = {
       SẢN PHẨM MỚI NHẤT
 
     </div>
-    <div class="grid 2xl:grid-cols-7 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-3 mx-10">
+    <div class="container mx-auto grid 2xl:grid-cols-7 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-3    ">
       ${newRes.map((item: Product) => `
       <a href="/product/${item.id}">
             <div class="p-3 drop-shadow-md border rounded-md min-h-[410px]">

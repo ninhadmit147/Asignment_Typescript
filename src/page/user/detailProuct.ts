@@ -26,7 +26,7 @@ const DetailProd = {
       </div>
     </div>
     <div class=" border-b">
-      <div class="container text-xl py-2 mx-auto ">
+      <div class="container text-2xl font-semibold py-2 mx-auto ">
         ${res.name}
       </div>
     </div>
@@ -67,7 +67,8 @@ const DetailProd = {
               <div id="sale">${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(res.sale)}</div>
             </div>
       <div class="text-gray-500 mt-2 ml-2" >
-        <div id="price" > ${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(res.price)} </div>
+        <div class="line-through"
+         id="price" > ${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(res.price)} </div>
           <div>
           </div>
           <div class="mt-5" >
@@ -147,8 +148,12 @@ const DetailProd = {
       const product = await Read(id)
       const data = product.data
 
+      console.log(data);
+
       //Set data cart
       const cart = JSON.parse(localStorage.getItem("cart"))
+      console.log(cart);
+
       if (cart) {
         const index = cart.findIndex(x => x.id == data.id)
         if (index === -1) {

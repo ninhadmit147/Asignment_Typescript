@@ -6,7 +6,7 @@ const Card = {
         // localStorage.setItem('cart', JSON.stringify(product.data))
         const item = JSON.parse(localStorage.getItem('cart'))
         if (item) {
-            const res = item.filter(function (prod) {
+            const res = item.filter(function (prod: any) {
                 return prod.id != undefined
             })
             let totalMoney = 0

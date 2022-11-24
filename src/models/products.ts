@@ -7,7 +7,7 @@ class Product {
     shortDesc: string;
     salientfeatures: string;
     category: number;
-    id: number;
+    id?: number;
     isDelete?: boolean;
 
     constructor(

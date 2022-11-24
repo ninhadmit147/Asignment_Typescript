@@ -7,7 +7,7 @@ const HeaderUser = {
     <!-- Header -->
     <div class="container mx-auto flex justify-start">
       <a href="/">
-        <img class="w-[200px] -mb-2" src="https://res.cloudinary.com/thisisninh/image/upload/v1659420756/cellphones-logo_lsv99x.png" alt="">
+        <img class="w-[120px] -mb-2" src="https://res.cloudinary.com/thisisninh/image/upload/v1668088540/logo_oiwgo2.png" alt="">
       </a>
       <div id="" class="my-4 xl:w-[500px] mx-10 bg-white rounded-md flex border-black border" >
         <button id="search"  class="border-black border-r" type="submit">
