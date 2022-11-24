@@ -1,2 +1,4 @@
 # Assignment_Typescript
-# Get started 
+# Get started
+  Cài đặt node module đê chạy dự án
+  
